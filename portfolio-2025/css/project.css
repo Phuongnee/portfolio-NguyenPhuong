@@ -179,6 +179,11 @@
 
 /* ===== Responsive Design ===== */
 @media screen and (max-width: 768px) {
+
+    .swiper-container {
+    justify-content: space-between;
+    display: flex;
+  }
     .slide-content {
         text-align: center;
         padding-left: 0;
@@ -193,11 +198,12 @@
     }
 
     .slide-content img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 80%;
-        right: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 10%;
+        height: auto;
+        object-fit: contain;
     }
 
     .custom-nav {
