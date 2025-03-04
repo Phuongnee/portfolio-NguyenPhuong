@@ -843,6 +843,7 @@ p a:hover {
     font-size: 2rem;
     cursor: pointer;
     background-color: transparent;
+    color: #1c1c1c;
   }
 
   #portfolio-section {
