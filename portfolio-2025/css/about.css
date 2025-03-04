@@ -342,7 +342,6 @@ p a:hover {
 @media screen and (max-width: 768px) {
   .container {
     width: 90%; /* Increase width to utilize screen space */
-    margin: 50px 0; /* Reduce margin for better spacing */
   }
 
   .content {
