@@ -380,6 +380,7 @@ body {
 }
 
 .portfolio-item img {
+  max-width: 500px;
   width: 100%;
   height: 500px; /* Augmente la hauteur */
   object-fit: cover; /* Évite la déformation de l’image */
@@ -440,7 +441,7 @@ body {
 /* Content Layout */
 .portfolio-content {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
   min-height: 400px; /* Ajustez la hauteur selon l’image */
