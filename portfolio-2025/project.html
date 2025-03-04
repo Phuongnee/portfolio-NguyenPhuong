@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Slideshow</title>
+    <link rel="stylesheet" href="./css/project.css">
+    <!-- Swiper.js CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <div id="nav-menu">
+        <div id="logo-container">
+          <img
+            src="./images/logo.png"
+            alt="Logo"
+            class="menu__logo"
+            onclick="location.href='index.html'"
+          />
+        </div>
+      </div>
+    <!-- Swiper Container -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <h2>ESOLY</h2>
+                    <p>UX/UI Design</p>
+                    
+                    <a href="./pdf/Projet interactif - ESOLY.pdf" target="_blank">
+                        <img src="./images/Shot-1.png" alt="ESOLY" />
+                    </a>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <h2>MUTUO</h2>
+                    <p>UX/UI Design</p>
+                    <a href="https://drive.google.com/drive/u/0/folders/1ZJOCBpQ0-Vm_YDOO7oQtLUiCfVOgvdXr" target="_blank">
+                        <img src="./images/Shot-2.png" alt="MUTUO" />
+                </div>
+            </div>
+            <!-- Slide 3 -->   
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <h2>CARDIENCE</h2>
+                    <p>Web Design</p>
+                    <a href="https://phuongnee.github.io/projet-edito/carte-postale/index.html#/" target="_blank">
+                        <img src="./images/cardience.png" alt="CARDIENCE" />
+                    </a>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <h2>STOP PLASTIQUE</h2>
+                    <p>UX/UI Design</p>
+                    <a href="https://phuongnee.github.io/data-website/data-website/index.html" target="_blank">
+                        <img src="./images/dataweb.jpeg" alt="STOP PLASTIQUE" />
+                      </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Custom Navigation Buttons -->
+        <div class="custom-nav">
+            <button class="swiper-button-prev">
+                ← PREV
+            </button>
+            <div class="swiper-pagination"></div>
+            <button class="swiper-button-next">
+                NEXT →
+            </button>
+        </div>
+    </div>
+
+    <!-- Swiper.js & Script -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/project.js"></script>
+
+</body>
+</html>
