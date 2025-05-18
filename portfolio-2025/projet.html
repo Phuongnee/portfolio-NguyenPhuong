@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Slideshow</title>
+    <link rel="stylesheet" href="./css/projet.css" />
+    <!-- Swiper.js CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="container-flex">
+      <div id="nav-menu">
+        <div id="logo-container">
+          <img
+            src="./images/logo.png"
+            alt="Logo"
+            class="menu__logo"
+            onclick="location.href='index.html'"
+          />
+        </div>
+        <div class="container menu menu__abs hide-on-mobile" id="menu">
+          <div class="menu__wrap">
+            <ul class="menu__inner menu-home">
+              <li class="menu__item menu-hover">
+                <a
+                  data-splitting
+                  data-menu="Project"
+                  href="./projet.html"
+                  class="menu__link"
+                >
+                  <p class="menu__number">01</p>
+                  <span class="menu__link-span">Projects</span>
+                  <span class="menu__link-span menu__link-clone">Projects</span>
+                </a>
+              </li>
+              <li class="menu__item menu-hover">
+                <a
+                  data-splitting
+                  data-menu="about"
+                  href="./about.html"
+                  class="menu__link"
+                >
+                  <p class="menu__number">02</p>
+                  <span class="menu__link-span">About</span>
+                  <span class="menu__link-span menu__link-clone">About</span>
+                </a>
+              </li>
+              <li class="menu__item menu-hover">
+                <a
+                  data-splitting
+                  data-menu="playground"
+                  href="./photo.html"
+                  class="menu__link"
+                >
+                  <p class="menu__number">03</p>
+                  <span class="menu__link-span">Playground</span>
+                  <span class="menu__link-span menu__link-clone"
+                    >Playground</span
+                  >
+                </a>
+              </li>
+              <li class="menu__item menu-hover">
+                <a
+                  data-splitting
+                  data-menu="contact"
+                  href="./contact.html"
+                  class="menu__link"
+                >
+                  <p class="menu__number">04</p>
+                  <span class="menu__link-span">Contact</span>
+                  <span class="menu__link-span menu__link-clone">Contact</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="menu-mobile" id="menu-mobile">
+          <div class="menu-close-container">
+            <button class="menu-close" id="menu-close" onclick="closeMenu()">
+              x
+            </button>
+          </div>
+          <div class="menu-mobile-inner">
+            <ul class="menu-mobile-list">
+              <li class="menu-mobile-item">
+                <a href="./projet.html">Projects</a>
+              </li>
+              <li class="menu-mobile-item">
+                <a href="./about.html">About</a>
+              </li>
+              <li class="menu-mobile-item">
+                <a href="./photo.html">Playground</a>
+              </li>
+              <li class="menu-mobile-item">
+                <a href="./contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div id="header-text">
+          <h1><span class="custom-font">MY</span>PROJECT</h1>
+        </div>
+        <!-- Characters -->
+        <div class="flex-container">
+          <button class="prev"><i class="fas fa-chevron-left"></i></button>
+          <div class="characters">
+            <div class="character-card">
+              <img
+                src="https://res.cloudinary.com/da9k32mdb/image/upload/v1747577477/shot-1.png"
+                alt="P1"
+              />
+              <div class="text-card">
+                <h2>ESOLY</h2>
+                <p>UX/UI Design</p>
+              </div>
+            </div>
+            <div
+              class="character-card"
+              data-title="ESOLY"
+              data-subtitle="UX/UI Design"
+            >
+              <a href="./louvre.html">
+                <img
+                  src="https://res.cloudinary.com/da9k32mdb/image/upload/v1747599746/Louvre.png"
+                  alt="P2"
+              /></a>
+              <div class="text-card">
+                <h2>Se Louvre</h2>
+                <p>UX/UI Design</p>
+              </div>
+            </div>
+            <div class="character-card">
+              <a
+                href="https://phuongnee.github.io/projet-edito/carte-postale/index.html#/"
+                target="_blank"
+              >
+                <img src="./images/cardience.png" alt="P3"
+              /></a>
+              <div class="text-card">
+                <h2>Cardience</h2>
+                <p>Web Design</p>
+              </div>
+            </div>
+            <div class="character-card">
+              <a
+                href="https://phuongnee.github.io/data-website/data-website/index.html"
+                target="_blank"
+                ><img
+                  src="https://res.cloudinary.com/da9k32mdb/image/upload/v1747577476/dataweb.jpg"
+                  alt="P4"
+              /></a>
+              <div class="text-card">
+                <h2>Stop Plastique</h2>
+                <p>Web Design</p>
+              </div>
+            </div>
+          </div>
+          <button class="next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+      <section id="contact-section">
+        <!-- Get in Touch Title -->
+        <div class="contact-header">
+          <h1>GET IN <span class="custom-font">TOUCH</span></h1>
+        </div>
+      </section>
+      <section class="footer-container">
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <div class="contact-left">
+            <p>
+              Maintenant que vous êtes là, pourquoi ne pas prendre contact ?
+              Jetez un œil autour, vous trouverez tous mes réseaux sociaux ainsi
+              que mon adresse e-mail. Si vous souhaitez collaborer ou si vous
+              avez une idée géniale, n'hésitez pas à m'envoyer un message,
+              j'adorerais en entendre parler !
+            </p>
+          </div>
+          <div class="contact-right">
+            <p>
+              <strong>Linkedin</strong> <strong>Instagram</strong>
+              <strong>Behance</strong>
+            </p>
+            <p class="email">
+              <span class="arrow">→</span> nthuphuong13111998@gmail.com
+            </p>
+          </div>
+        </div>
+
+        <!-- Footer Copyright -->
+        <div class="footer">
+          <p>© 2025 BY PHUONG NGUYEN</p>
+          <!-- Back to Top Button -->
+          <div class="back-to-top">
+            <a
+              class="semplice-event"
+              data-event-type="helper"
+              data-event="scrollToTop"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="arrow_up" clip-path="url(#clip0_1415_14153)">
+                  <path
+                    id="Subtract"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.99805 20.0001C15.5209 20.0001 19.998 15.523 19.998 10.0001C19.998 4.47728 15.5209 0.000126922 9.99805 0.000125916C4.4752 0.000125079 -0.00195266 4.47728 -0.00195316 10.0001C-0.00195366 15.523 4.4752 20.0001 9.99805 20.0001ZM10.4861 4.93078C10.2053 4.69003 9.79082 4.69003 9.50995 4.93078L6.00995 7.93077C5.69546 8.20034 5.65904 8.67382 5.9286 8.98831C6.19817 9.3028 6.67164 9.33923 6.98614 9.06966L9.24805 7.13088L9.24805 14.5002C9.24805 14.9144 9.58383 15.2502 9.99805 15.2502C10.4123 15.2502 10.748 14.9144 10.748 14.5002L10.748 7.13088L13.01 9.06966C13.3244 9.33923 13.7979 9.30281 14.0675 8.98831C14.3371 8.67382 14.3006 8.20034 13.9861 7.93078L10.4861 4.93078Z"
+                    fill="black"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_1415_14153">
+                    <rect
+                      width="20"
+                      height="20"
+                      fill="white"
+                      transform="translate(20 20) rotate(-180)"
+                    ></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+              <span class="back-to-top-text">Top</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      const prevButton = document.querySelector(".prev");
+      const nextButton = document.querySelector(".next");
+      const charactersContainer = document.querySelector(".characters");
+
+      // Fonction pour activer/désactiver les boutons en fonction de la position du scroll
+      function updateButtons() {
+        const maxScroll =
+          charactersContainer.scrollWidth - charactersContainer.clientWidth;
+        prevButton.disabled = charactersContainer.scrollLeft <= 0;
+        nextButton.disabled = charactersContainer.scrollLeft >= maxScroll;
+      }
+
+      // Event listeners pour les boutons
+      prevButton.addEventListener("click", () => {
+        charactersContainer.scrollBy({
+          left: -300, // Défile de 300px vers la gauche
+          behavior: "smooth", // Défilement fluide
+        });
+        updateButtons();
+      });
+
+      nextButton.addEventListener("click", () => {
+        charactersContainer.scrollBy({
+          left: 300, // Défile de 300px vers la droite
+          behavior: "smooth", // Défilement fluide
+        });
+        updateButtons();
+      });
+
+      // Mise à jour de l'état des boutons au chargement et lors du défilement
+      updateButtons();
+
+      // Event listeners pour le défilement manuel de la galerie
+      charactersContainer.addEventListener("scroll", updateButtons);
+
+      // Fonction pour gérer le survol des cartes de personnages
+      const characterCards = document.querySelectorAll(".character-card");
+
+      characterCards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          // Quand on survole une carte, on applique 'not-hovered' aux autres cartes
+          characterCards.forEach((otherCard) => {
+            if (otherCard !== card) {
+              otherCard.classList.add("not-hovered");
+            }
+          });
+        });
+
+        card.addEventListener("mouseleave", () => {
+          // Quand on quitte le survol d'une carte, on retire 'not-hovered' de toutes les cartes
+          characterCards.forEach((otherCard) => {
+            otherCard.classList.remove("not-hovered");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,506 @@
+
+@font-face {
+  font-family: "HarmoniaSansMonoBold";
+  src: url("../font/Harmonia-Sans-Font/Harmonia\ Sans\ W01\ Bold.otf")
+    format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RobertBold";
+  src: url("../font/roobert-font-family-1739094187-0/RoobertTRIAL-SemiBold-BF67243fd54213d.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobertRegular";
+  src: url("../font/roobert-font-family-1739094187-0/RoobertMonoTRIAL-Regular-BF67243fd29a433.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RoxboroughCF";
+  src: url("../font/Rox/Roxborough\ CF.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* height: 100vh; */
+  background: #f9f8f3;
+  color: #383838;
+  overflow-y: auto !important;
+}
+.container-flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px; /* Ajout de padding pour éviter que le texte touche les bords */
+}
+
+/* Navigation Menu */
+/* MENU */
+#nav-menu {
+  display: flex; /* Ajout crucial pour activer Flexbox */
+  flex-direction: row; /* Assure l'alignement horizontal (valeur par défaut, mais explicite ici) */
+  align-items: center; /* Centre les éléments verticalement sur la ligne */
+  padding: 0 100px;
+  width: 100%;
+  height: 80px; /* Hauteur fixe pour le menu */
+  justify-content: space-between;
+  position: fixed;
+  top: 5%; /* Vous pourriez préférer top: 0; pour un alignement strict en haut */
+  left: 0; /* S'assurer qu'il s'étend sur toute la largeur */
+  z-index: 9999;
+
+
+}
+.menu__logo {
+  width: 70px;
+}
+
+.menu-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: #383838;
+  justify-content: center;
+  align-items: center;
+}
+.menu-mobile-inner {
+  display: flex;
+  flex-direction: column; /* Arrange items in a column */
+  gap: 20px; /* Space between items */
+  width: 100%;
+  align-items: center; /* Center items horizontally */
+}
+
+.menu-mobile-list {
+  display: flex;
+  flex-direction: column; /* Ensure list items are in a column */
+  align-items: center; /* Center the items */
+  gap: 15px; /* Space between menu items */
+  list-style: none;
+  padding: 0;
+}
+
+.menu-mobile-item {
+  display: block; /* Ensure full width */
+  font-weight: 500;
+  color: #f9f8f3;
+  text-align: center; /* Center text */
+  transition: color 0.3s ease;
+  font-family: "HarmoniaSansMonoRegular", sans-serif;
+}
+.menu-mobile-item a {
+  color: #f9f8f3;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.menu-mobile-item a:hover {
+  color: #666;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu {
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1; /* Initially hidden */
+  transition: opacity 0.5s ease-in-out, background 0.3s ease-in-out;
+  padding: 10px 20px;
+  background: transparent;
+  border-radius: 10px;
+}
+
+.menu__wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.menu__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* MENU LINKS */
+.menu__link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1c1c1c;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+  font-family: "HarmoniaSansMonoRegular", sans-serif;
+}
+
+/* HOVER EFFECT */
+.menu:hover {
+  background-color: black;
+  transition: background 0.3s ease-in-out;
+  padding: 20px 0;
+}
+
+.menu:hover .menu__link,
+.menu:hover .menu__number {
+  color: white;
+}
+
+.menu__number {
+  margin-right: 2rem;
+  margin-bottom: 10px;
+  color: #939393;
+}
+
+/* MENU LINK HOVER ANIMATION */
+.menu__link:hover .menu__link-span {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.menu__link-clone {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.menu__link:hover .menu__link-clone {
+  transform: translateY(-100%);
+}
+
+.custom-font {
+  font-family: "RoxboroughCF", serif; /* Use the custom font */
+  font-weight: 400;
+  font-size: inherit;
+  font-style: italic;
+  letter-spacing: -0.05em;
+  line-height: 1.2;
+  color: #1c1c1c;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 7;
+}
+#header-text h1 {
+  font-size: 72px;
+  font-weight: bold;
+  margin: 0;
+  font-family: "HarmoniaSansMonoBold", sans-serif;
+  white-space: nowrap;
+}
+
+.container {
+  width: 100%; /* S'assurer que le conteneur occupe toute la largeur */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 250px 0;
+  position: relative;
+  padding: 0 20px; /* Ajout de padding pour éviter que le texte touche les bords */
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding-top: 100px;
+}
+/* Description */
+.description {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Personnages - version scroll horizontal */
+.characters {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 15px;
+  position: relative; /* Important pour que les boutons soient positionnés par rapport à .characters */
+  width: 100%;
+  
+}
+
+.character-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s, opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Cache l'excédent de l'image si nécessaire */
+  color: #281212;
+  font-family: "icomoon", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.character-card img {
+  width: 300px;
+  height: 360px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  object-fit: cover; /* L'image est recadrée pour s'adapter au cercle */
+  object-position: center; /* Centrer l'image à l'intérieur de la carte */
+}
+
+.character-card:hover {
+  transform: scale(1.05);
+  opacity: 1; /* Rétablir l'opacité lors du survol */
+  z-index: 9999; /* Assurer que la carte est au premier plan */
+}
+
+.character-card.not-hovered {
+  opacity: 0.8; /* Réduire l'opacité des cartes non survolées */
+  filter: grayscale(100%); /* Appliquer un filtre de désaturation */
+}
+.text-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  max-width: 280px; /* Limiter la largeur du texte */
+}
+.character-card h2 {
+  font-size: 1.5em;
+  color: #281212;
+  font-weight: 700;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.character-card p {
+  font-size: 14px;
+  color: #281212;
+  font-weight: 300;
+  justify-content: center;
+  text-align: center;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.characters {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ======= CONTACT SECTION ======= */
+#contact-section {
+  width: 100%;
+  padding: 150px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #c9c9c9; /* Top border */
+  border-bottom: 1px solid #c9c9c9; /* Bottom border */
+  box-sizing: border-box;
+  
+}
+
+.contact-header h1 {
+  font-size: 96px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* ======= FOOTER CONTAINER ======= */
+.footer-container {
+  width: 100%;
+  padding: 60px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   font-family: "HarmoniaSansMonoRegular", sans-serif;
+  font-weight: 500;
+  color: #333;
+  
+}
+
+/* Contact Info Section */
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1500px;
+  margin-bottom: 40px;
+  font-family: "HarmoniaSansMonoRegular", sans-serif;
+  font-weight: 200;
+  line-height: 1.6;
+  
+}
+
+.contact-left {
+  text-align: left;
+  max-width: 400px;
+  font-size: 16px;
+  color: #333;
+  
+  
+}
+
+.contact-right {
+  text-align: right;
+  
+}
+
+.contact-right p {
+  font-size: 16px;
+  margin: 5px 0;
+  font-family: "HarmoniaSansMonoRegular", sans-serif;
+  font-weight: 200;
+  line-height: 1.6;
+}
+
+.contact-right strong {
+  margin-right: 15px;
+}
+
+/* Email Styling */
+.email {
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.arrow {
+  font-size: 22px;
+  margin-right: 8px;
+}
+
+/* Footer Copyright */
+.footer {
+  margin-top: 20px;
+  font-size: 14px;
+  padding-top: 10px;
+  padding: 20px 60px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Ensures spacing between text & button */
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+/* Back-to-Top Button */
+.back-to-top {
+  position: absolute;
+  right: 30px; /* Position it on the right side of the footer */
+  bottom: 10px;
+}
+
+.back-to-top a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+  gap: 5px; /* Space between icon and text */
+  text-decoration: none;
+}
+
+/* Icon */
+.back-to-top svg {
+  width: 24px;
+  height: 24px;
+  fill: black; /* Default color */
+  transition: fill 0.3s ease-in-out;
+}
+
+/* Text */
+.back-to-top-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.back-to-top:hover svg {
+  fill: #666; /* Change icon color on hover */
+}
+
+.back-to-top:hover .back-to-top-text {
+  color: #666; /* Change text color on hover */
+}
+/* Base Styles for Links */
+p a {
+  position: relative;
+  text-decoration: none;
+  color: black; /* Default text color */
+  font-weight: bold;
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+/* Underline Effect */
+p a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Position the underline below text */
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background-color: black; /* Color of the underline */
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Hover Effect - Underline Appears */
+p a:hover::after {
+  transform: scaleX(1); /* Expand the underline */
+}
+
+/* Hover Effect - Change Text Color */
+p a:hover {
+  color: #666; /* Change text color on hover */
+}
+
