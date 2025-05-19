@@ -1320,43 +1320,33 @@ body {
   height: auto;
   object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
 }
-.last {
-  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
-  justify-content: center; /* Place les éléments aux extrémités */
-  align-items: center; /* Aligne les éléments en haut */
+
+/* ======= EXPLORE SECTION ======= */
+.explore {
   text-align: center;
-  width: 100%;
-  margin-top: 100px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 5%; /* Ajoute un peu de padding horizontal */
   margin-bottom: 100px;
 }
-.last img {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
-  padding-bottom: 50px;
+
+.explore h3 {
+  font-size: 16px;
+  padding-bottom: 20px;
 }
-.conclusion {
-  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
-  justify-content: center; /* Place les éléments aux extrémités */
-  align-items: center; /* Aligne les éléments en haut */
-  text-align: center;
-  gap: 40px; /* Ajoute de l'espace entre les éléments */
-  width: 100%;
-  margin-top: 100px;
-  padding: 100px 10%; /* Ajoute un peu de padding horizontal */
-  flex-direction: column; /* Dispose les éléments en colonne */ 
-  background-image: url("https://res.cloudinary.com/da9k32mdb/image/upload/v1747603028/footer.png");
-  background-size: cover; /* Couvre tout le conteneur */
-  background-position: center; /* Centre l'image de fond */
-  background-repeat: no-repeat; /* Évite la répétition de l'image */
-}
-.conclusion h2{
-  font-size: 72px;
-  font-family: "HarmoniaSansMonoRegular", sans-serif;
-  color: #f9f8f3;
+.explore-images {
+  display: flex;
+  gap: 10px;
 }
 
+.explore-images img {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+}
 /* ======= CONTACT SECTION ======= */
 #contact-section {
   width: 100%;

@@ -250,7 +250,7 @@ body {
 /* Personnages - version scroll horizontal */
 .characters {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   overflow-x: auto;
   padding: 10px 0;
   scroll-snap-type: x mandatory;
@@ -258,6 +258,9 @@ body {
   gap: 15px;
   position: relative; /* Important pour que les boutons soient positionnés par rapport à .characters */
   width: 100%;
+  margin: 0 auto; /* Centrer le conteneur */
+  justify-content: center;
+  align-items: center;
   
 }
 
@@ -265,7 +268,7 @@ body {
   flex: 0 0 auto;
   scroll-snap-align: start;
   text-align: center;
-  width: 300px;
+  width: 400px;
   transition: transform 0.3s, opacity 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -279,8 +282,8 @@ body {
 }
 
 .character-card img {
-  width: 300px;
-  height: 360px;
+  width: 400px;
+  height: 450px;
   margin-bottom: 10px;
   border-radius: 5px;
   object-fit: cover; /* L'image est recadrée pour s'adapter au cercle */
@@ -329,6 +332,60 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.contact {
+  text-align: center;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.contact h3 {
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+.contact-text {
+  display: flex;
+  font-family: "HarmoniaSansMonoRegular", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 1.6;
+  gap: 10px;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+p a {
+  position: relative;
+  text-decoration: none;
+  color: black; /* Default text color */
+  font-family: "RoxboroughCF", serif; /* Use the custom font */
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+/* Underline Effect */
+p a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Position the underline below text */
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background-color: black; /* Color of the underline */
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Hover Effect - Underline Appears */
+p a:hover::after {
+  transform: scaleX(1); /* Expand the underline */
+}
+
+/* Hover Effect - Change Text Color */
+p a:hover {
+  color: #666; /* Change text color on hover */
+}
+
+
 
 /* ======= CONTACT SECTION ======= */
 #contact-section {
