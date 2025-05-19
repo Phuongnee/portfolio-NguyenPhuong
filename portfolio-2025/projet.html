@@ -22,6 +22,10 @@
             onclick="location.href='index.html'"
           />
         </div>
+        <!-- Menu Toggle Button (Only for Mobile) -->
+        <button id="menu-toggle" class="menu-toggle" onclick="openMenu()">
+          ☰
+        </button>
         <div class="container menu menu__abs hide-on-mobile" id="menu">
           <div class="menu__wrap">
             <ul class="menu__inner menu-home">
@@ -110,19 +114,9 @@
         <div class="flex-container">
           <button class="prev"><i class="fas fa-chevron-left"></i></button>
           <div class="characters">
-            <div class="character-card">
-              <img
-                src="https://res.cloudinary.com/da9k32mdb/image/upload/v1747577477/shot-1.png"
-                alt="P1"
-              />
-              <div class="text-card">
-                <h2>ESOLY</h2>
-                <p>UX/UI Design</p>
-              </div>
-            </div>
             <div
               class="character-card"
-              data-title="ESOLY"
+              data-title="Louvre"
               data-subtitle="UX/UI Design"
             >
               <a href="./louvre.html">
@@ -163,6 +157,18 @@
               </div>
             </div>
             <div class="character-card">
+              <a href="./pdf/ESOLY.pdf" target="_blank">
+                <img
+                  src="https://res.cloudinary.com/da9k32mdb/image/upload/v1747577477/shot-1.png"
+                  alt="P1"
+                />
+              </a>
+              <div class="text-card">
+                <h2>ESOLY</h2>
+                <p>UX/UI Design</p>
+              </div>
+            </div>
+            <div class="character-card">
               <a href="https://zen-sai.vercel.app" target="_blank">
                 <img
                   src="https://res.cloudinary.com/da9k32mdb/image/upload/v1747642969/Zen-Sai.png"
@@ -170,13 +176,15 @@
               /></a>
               <div class="text-card">
                 <h2>Zen-Sai</h2>
-                <p>web Design</p>
+                <p>Web Design</p>
               </div>
             </div>
             <div class="character-card">
-              <a href="./louvre.html">
+              <a
+                href="https://phuongnee.github.io/Fondation-de-m-moire-de-l-eclavage/projet-esclavage/index.html"
+              >
                 <img
-                  src="https://res.cloudinary.com/da9k32mdb/image/upload/v1747599746/Louvre.png"
+                  src="https://res.cloudinary.com/da9k32mdb/image/upload/v1747678954/slavery1.png"
                   alt="P6"
               /></a>
               <div class="text-card">
@@ -199,7 +207,6 @@
           </p>
         </div>
       </div>
-    </div>
       <section id="contact-section">
         <!-- Get in Touch Title -->
         <div class="contact-header">
@@ -233,46 +240,11 @@
         <div class="footer">
           <p>© 2025 BY PHUONG NGUYEN</p>
           <!-- Back to Top Button -->
-          <div class="back-to-top">
-            <a
-              class="semplice-event"
-              data-event-type="helper"
-              data-event="scrollToTop"
-            >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="arrow_up" clip-path="url(#clip0_1415_14153)">
-                  <path
-                    id="Subtract"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M9.99805 20.0001C15.5209 20.0001 19.998 15.523 19.998 10.0001C19.998 4.47728 15.5209 0.000126922 9.99805 0.000125916C4.4752 0.000125079 -0.00195266 4.47728 -0.00195316 10.0001C-0.00195366 15.523 4.4752 20.0001 9.99805 20.0001ZM10.4861 4.93078C10.2053 4.69003 9.79082 4.69003 9.50995 4.93078L6.00995 7.93077C5.69546 8.20034 5.65904 8.67382 5.9286 8.98831C6.19817 9.3028 6.67164 9.33923 6.98614 9.06966L9.24805 7.13088L9.24805 14.5002C9.24805 14.9144 9.58383 15.2502 9.99805 15.2502C10.4123 15.2502 10.748 14.9144 10.748 14.5002L10.748 7.13088L13.01 9.06966C13.3244 9.33923 13.7979 9.30281 14.0675 8.98831C14.3371 8.67382 14.3006 8.20034 13.9861 7.93078L10.4861 4.93078Z"
-                    fill="black"
-                  ></path>
-                </g>
-                <defs>
-                  <clipPath id="clip0_1415_14153">
-                    <rect
-                      width="20"
-                      height="20"
-                      fill="white"
-                      transform="translate(20 20) rotate(-180)"
-                    ></rect>
-                  </clipPath>
-                </defs>
-              </svg>
-              <span class="back-to-top-text">Top</span>
-            </a>
-          </div>
         </div>
       </section>
     </div>
     <script>
+      const menuMobile = document.querySelector('.menu-mobile'); // Ajout de cette ligne
       const prevButton = document.querySelector(".prev");
       const nextButton = document.querySelector(".next");
       const charactersContainer = document.querySelector(".characters");
@@ -328,6 +300,18 @@
           });
         });
       });
+      // Système de menu mobile
+      function openMenu() {
+        menuMobile.style.display = "flex";
+        menuToggle.style.display = "none";
+        logoContainer.style.display = "none";
+      }
+
+      function closeMenu() {
+        menuMobile.style.display = "none";
+        menuToggle.style.display = "block";
+        logoContainer.style.display = "block";
+      }
     </script>
   </body>
 </html>

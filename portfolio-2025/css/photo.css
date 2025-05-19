@@ -223,6 +223,9 @@ h1 {
   width: 100%;
   max-width: 1500px;
   margin-bottom: 40px;
+  font-family: "HarmoniaSansMonoRegular", sans-serif;
+  font-weight: 200;
+  line-height: 1.6;
 }
 
 .contact-left {
@@ -230,6 +233,9 @@ h1 {
   max-width: 400px;
   font-size: 16px;
   color: #333;
+  font-family: "HarmoniaSansMonoRegular", sans-serif;
+  font-weight: 200;
+  line-height: 1.6;
 }
 
 .contact-right {
@@ -239,6 +245,9 @@ h1 {
 .contact-right p {
   font-size: 16px;
   margin: 5px 0;
+  font-family: "HarmoniaSansMonoRegular", sans-serif;
+  font-weight: 200;
+  line-height: 1.6;
 }
 
 .contact-right strong {

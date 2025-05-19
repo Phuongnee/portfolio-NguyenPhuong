@@ -1343,8 +1343,8 @@ body {
 }
 
 .explore-images img {
-  width: 100px;
-  height: auto;
+  width: 200px;
+  height: 50;
   border-radius: 5px;
 }
 /* ======= CONTACT SECTION ======= */

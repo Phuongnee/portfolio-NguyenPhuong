@@ -901,7 +901,13 @@ p a:hover {
   .line {
     width: 100%;
   }
-
+  .container-wrap {
+    padding: 0 20px; /* Reduce padding for smaller screens */
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
   /* ========== Portfolio Grid Adjustments ========== */
   .portfolio-grid {
     display: flex;
@@ -910,6 +916,7 @@ p a:hover {
     align-items: center;
     height: auto;
     visibility: visible;
+    justify-content: center;
   }
 
   .portfolio-item {
