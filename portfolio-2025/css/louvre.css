@@ -1285,6 +1285,13 @@ body {
   width: 50%; /* Limite la largeur maximale */
   text-align: center; /* Aligne le texte à gauche */
 }
+.text-content-22 iframe {
+  width: 100%;
+  max-width: 1500px;
+  height: 800px;
+  border: none; /* Enlève la bordure par défaut */
+  border-radius: 12px; /* Ajoute un léger arrondi aux coins */
+}
 .text-content-22 h2{
   font-size: 72px;
   font-family: "RoxboroughCF", serif;
