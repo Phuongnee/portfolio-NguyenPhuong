@@ -227,6 +227,9 @@ textarea {
   width: 100%;
   max-width: 1500px;
   margin-bottom: 40px;
+  font-family: "HarmoniaSansMonoRegular", sans-serif;
+  font-weight: 200;
+  line-height: 1.6;
 }
 
 .contact-left {
@@ -234,6 +237,9 @@ textarea {
   max-width: 400px;
   font-size: 16px;
   color: #333;
+  font-family: "HarmoniaSansMonoRegular", sans-serif;
+  font-weight: 200;
+  line-height: 1.6;
 }
 
 .contact-right {
@@ -243,6 +249,9 @@ textarea {
 .contact-right p {
   font-size: 16px;
   margin: 5px 0;
+  font-family: "HarmoniaSansMonoRegular", sans-serif;
+  font-weight: 200;
+  line-height: 1.6;
 }
 
 .contact-right strong {
