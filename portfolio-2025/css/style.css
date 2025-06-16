@@ -938,6 +938,11 @@ p a:hover {
     font-size: 14px;
     color: #777;
   }
+  .sub-title-projet{
+    font-family: "HarmoniaSansMonoRegular", sans-serif;
+    font-size: 16px;
+    color: #383838;
+  }
   /* EVOLUTION SECTION */
   .evolution-title {
     font-size: 1.2rem;
@@ -1006,9 +1011,11 @@ p a:hover {
   }
 
   .small-text {
-    font-size: 18px;
+    font-size: 16px;
     max-width: 90%;
     text-align: center;
+    line-height: 1.6;
+    font-family: "HarmoniaSansMonoRegular", sans-serif;
   }
 
   .text-arrow {
@@ -1063,12 +1070,16 @@ p a:hover {
     align-items: center;
     gap: 20px;
     text-align: center;
+  
   }
 
   .about-description {
-    max-width: 90%;
+    font-size: 16px;
+    max-width: 100%;
     text-align: center;
-    font-size: 14px;
+    line-height: 1.6;
+    font-family: "HarmoniaSansMonoRegular", sans-serif;
+    padding: 0 20px; /* Add padding for better readability */
   }
 
   /* ========== Image Adjustments ========== */
