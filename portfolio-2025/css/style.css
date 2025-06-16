@@ -1079,7 +1079,9 @@ p a:hover {
     text-align: center;
     line-height: 1.6;
     font-family: "HarmoniaSansMonoRegular", sans-serif;
-    padding: 0 20px; /* Add padding for better readability */
+    padding: 0 20px; /* Add padding for better readability */ 
+    font-weight: 200;
+    color: #383838;
   }
 
   /* ========== Image Adjustments ========== */
